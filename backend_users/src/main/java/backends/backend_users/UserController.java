@@ -13,7 +13,7 @@ public class UserController {
     @Autowired
     private UserServiceImpl userService;
 
-    @PostMapping
+    @PostMapping(path = {"/createuser"})
     public User create(@RequestBody User user){
         return userService.create(user);
     }
