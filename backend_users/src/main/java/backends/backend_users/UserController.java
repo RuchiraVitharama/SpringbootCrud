@@ -28,10 +28,10 @@ public class UserController {
     	 return user;*/
     }
 
-    @PutMapping
+    @PutMapping(path = {"/updateuser"})
     public User update(@RequestBody User user){
         return userService.update(user);
-    }
+    } 
 
     @DeleteMapping(path ={"/deleteuser/{id}"})
     public User delete(@PathVariable("id") Long id) {
